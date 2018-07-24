@@ -1,0 +1,10 @@
+Create a repo 
+    # cd /svn/csvn/data/repositories
+    # svnadmin create MyLovelyRepo
+
+Restore a repo
+    # cat /tmp/MyLovelyRepo-bkup.dump.gz | gzip -d | svnadmin load /svn/csvn/data/repositories/MyLovelyRepo
+
+Create a backup
+    # svnadmin dump /svn/csvn/data/repositories/MyLovelyRepo > /tmp/MyLovelyRepo.dump
+    # gzip /tmp/MyLovelyRepo.dump
